@@ -1,0 +1,53 @@
+# Python
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Caches
+.cache/
+.pyright/
+.ruff_cache/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large/generated data
+data/raw/
+data/interim/
+data/processed/
+
+# Model checkpoints / generated models
+models/checkpoints/
+models/*.pkl
+models/*.joblib
+models/*.bin
+models/*.pt
+models/*.pth
+
+# Vercel
+.vercel/
