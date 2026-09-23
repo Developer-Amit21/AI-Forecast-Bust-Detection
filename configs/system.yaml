@@ -1,0 +1,4 @@
+api_prefix: /api
+data_source_label: SYNTHETIC — development only
+max_upload_mb: 100
+log_json: true

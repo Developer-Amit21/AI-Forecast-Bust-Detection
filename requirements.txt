@@ -1,0 +1,15 @@
+fastapi>=0.115,<1
+uvicorn[standard]>=0.30,<1
+pydantic>=2.8,<3
+sqlalchemy>=2.0,<3
+psycopg[binary]>=3.2,<4
+numpy>=2.0,<3
+pandas>=2.2,<4
+scikit-learn>=1.5,<2
+xgboost>=2.1,<4
+lightgbm>=4.5,<5
+shap>=0.46,<1
+xarray>=2024.10,<2027
+netCDF4>=1.7,<2
+cfgrib>=0.9.14,<1
+pyyaml>=6,<7

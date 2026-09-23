@@ -1,0 +1,11 @@
+version: synthetic_bust_v1
+classifier: xgboost
+regressor: lightgbm
+random_seed: 42
+test_fraction: 0.2
+calibration: sigmoid
+confidence_weights:
+  no_bust_probability: 0.55
+  historical_reliability: 0.25
+  data_quality: 0.15
+  calibration_quality: 0.05

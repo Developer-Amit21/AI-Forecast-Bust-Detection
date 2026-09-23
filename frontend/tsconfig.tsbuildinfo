@@ -1,0 +1,1 @@
+{"root":["./src/main.tsx","./src/components/ControlBar.tsx","./src/components/InsightPanel.tsx","./src/components/MapPanel.tsx","./src/components/TrendChart.tsx","./src/hooks/useDashboard.ts","./src/pages/Dashboard.tsx","./src/services/api.ts","./src/types/api.ts"],"version":"5.8.3"}

@@ -1,0 +1,456 @@
+{
+  "overall": {
+    "mae": 2.2575407617474523,
+    "rmse": 4.064355965665165,
+    "r2": -0.05000415771240152,
+    "bias": 0.9753706838859929,
+    "precision": 0.2623220153340635,
+    "recall": 0.14675245098039216,
+    "f1": 0.18821218074656187,
+    "roc_auc": 0.6647369902012712,
+    "pr_auc": 0.21868834921794572,
+    "brier_score": 0.12272788378885187
+  },
+  "by_variable_lead": [
+    {
+      "variable": "precipitation",
+      "lead_day": 1,
+      "mae": 4.8668440976552345,
+      "brier_score": 0.2007775383632018
+    },
+    {
+      "variable": "precipitation",
+      "lead_day": 2,
+      "mae": 5.027982942391568,
+      "brier_score": 0.18772751218080705
+    },
+    {
+      "variable": "precipitation",
+      "lead_day": 3,
+      "mae": 5.207698698474911,
+      "brier_score": 0.1904404778161156
+    },
+    {
+      "variable": "precipitation",
+      "lead_day": 4,
+      "mae": 5.587630087902917,
+      "brier_score": 0.18382226425435258
+    },
+    {
+      "variable": "precipitation",
+      "lead_day": 5,
+      "mae": 5.4341054965505675,
+      "brier_score": 0.16132399656316534
+    },
+    {
+      "variable": "precipitation",
+      "lead_day": 6,
+      "mae": 6.142637816740451,
+      "brier_score": 0.18433808483836575
+    },
+    {
+      "variable": "precipitation",
+      "lead_day": 7,
+      "mae": 5.951693503208116,
+      "brier_score": 0.15403089226397673
+    },
+    {
+      "variable": "precipitation",
+      "lead_day": 8,
+      "mae": 6.212866456225777,
+      "brier_score": 0.15902284810256562
+    },
+    {
+      "variable": "precipitation",
+      "lead_day": 9,
+      "mae": 6.328161561392059,
+      "brier_score": 0.15305729961776263
+    },
+    {
+      "variable": "precipitation",
+      "lead_day": 10,
+      "mae": 6.404781063277788,
+      "brier_score": 0.1548176005185861
+    },
+    {
+      "variable": "temperature_2m",
+      "lead_day": 1,
+      "mae": 0.4473077077207599,
+      "brier_score": 0.10696662169089513
+    },
+    {
+      "variable": "temperature_2m",
+      "lead_day": 2,
+      "mae": 0.4639833085367133,
+      "brier_score": 0.10919665794836614
+    },
+    {
+      "variable": "temperature_2m",
+      "lead_day": 3,
+      "mae": 0.4718358801201814,
+      "brier_score": 0.10359199701716594
+    },
+    {
+      "variable": "temperature_2m",
+      "lead_day": 4,
+      "mae": 0.49200443375511466,
+      "brier_score": 0.09716925382187516
+    },
+    {
+      "variable": "temperature_2m",
+      "lead_day": 5,
+      "mae": 0.5080886902610177,
+      "brier_score": 0.10378879421566038
+    },
+    {
+      "variable": "temperature_2m",
+      "lead_day": 6,
+      "mae": 0.5310356534799432,
+      "brier_score": 0.11160989349051606
+    },
+    {
+      "variable": "temperature_2m",
+      "lead_day": 7,
+      "mae": 0.5197149958614296,
+      "brier_score": 0.08803491654526102
+    },
+    {
+      "variable": "temperature_2m",
+      "lead_day": 8,
+      "mae": 0.565801542978202,
+      "brier_score": 0.10955168943850474
+    },
+    {
+      "variable": "temperature_2m",
+      "lead_day": 9,
+      "mae": 0.5927672057394404,
+      "brier_score": 0.10992492368221948
+    },
+    {
+      "variable": "temperature_2m",
+      "lead_day": 10,
+      "mae": 0.5882742018286431,
+      "brier_score": 0.09889096148752886
+    },
+    {
+      "variable": "wind_speed",
+      "lead_day": 1,
+      "mae": 0.3798085656000058,
+      "brier_score": 0.08297646388017342
+    },
+    {
+      "variable": "wind_speed",
+      "lead_day": 2,
+      "mae": 0.42198753466871036,
+      "brier_score": 0.09163594959623003
+    },
+    {
+      "variable": "wind_speed",
+      "lead_day": 3,
+      "mae": 0.48242919790461825,
+      "brier_score": 0.11284432718861123
+    },
+    {
+      "variable": "wind_speed",
+      "lead_day": 4,
+      "mae": 0.5046370391763111,
+      "brier_score": 0.10651468452941447
+    },
+    {
+      "variable": "wind_speed",
+      "lead_day": 5,
+      "mae": 0.514826720682703,
+      "brier_score": 0.09776199929427251
+    },
+    {
+      "variable": "wind_speed",
+      "lead_day": 6,
+      "mae": 0.5565380409228845,
+      "brier_score": 0.1010699328789882
+    },
+    {
+      "variable": "wind_speed",
+      "lead_day": 7,
+      "mae": 0.5957856623027895,
+      "brier_score": 0.09298292036449511
+    },
+    {
+      "variable": "wind_speed",
+      "lead_day": 8,
+      "mae": 0.5999457867115383,
+      "brier_score": 0.07784864191034664
+    },
+    {
+      "variable": "wind_speed",
+      "lead_day": 9,
+      "mae": 0.6301103865313292,
+      "brier_score": 0.06893303517413833
+    },
+    {
+      "variable": "wind_speed",
+      "lead_day": 10,
+      "mae": 0.6949385738218403,
+      "brier_score": 0.08118433499199422
+    }
+  ],
+  "bust_thresholds": [
+    {
+      "variable": "precipitation",
+      "lead_day": 1,
+      "bust_threshold": 8.20852395068816,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "precipitation",
+      "lead_day": 2,
+      "bust_threshold": 9.151368582956513,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "precipitation",
+      "lead_day": 3,
+      "bust_threshold": 9.489519635509502,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "precipitation",
+      "lead_day": 4,
+      "bust_threshold": 10.709504012369464,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "precipitation",
+      "lead_day": 5,
+      "bust_threshold": 11.551595478697044,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "precipitation",
+      "lead_day": 6,
+      "bust_threshold": 12.462592634598757,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "precipitation",
+      "lead_day": 7,
+      "bust_threshold": 13.177781578425652,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "precipitation",
+      "lead_day": 8,
+      "bust_threshold": 13.748092606545022,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "precipitation",
+      "lead_day": 9,
+      "bust_threshold": 14.910716196766796,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "precipitation",
+      "lead_day": 10,
+      "bust_threshold": 15.116076399290474,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "temperature_2m",
+      "lead_day": 1,
+      "bust_threshold": 0.836143240525109,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "temperature_2m",
+      "lead_day": 2,
+      "bust_threshold": 0.9170680651908825,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "temperature_2m",
+      "lead_day": 3,
+      "bust_threshold": 1.0151932931608965,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "temperature_2m",
+      "lead_day": 4,
+      "bust_threshold": 1.1207911054317812,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "temperature_2m",
+      "lead_day": 5,
+      "bust_threshold": 1.2189079760809438,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "temperature_2m",
+      "lead_day": 6,
+      "bust_threshold": 1.289807599509393,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "temperature_2m",
+      "lead_day": 7,
+      "bust_threshold": 1.3824459050188516,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "temperature_2m",
+      "lead_day": 8,
+      "bust_threshold": 1.4741656491688424,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "temperature_2m",
+      "lead_day": 9,
+      "bust_threshold": 1.5800689401518433,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "temperature_2m",
+      "lead_day": 10,
+      "bust_threshold": 1.701746467449265,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "wind_speed",
+      "lead_day": 1,
+      "bust_threshold": 1.2810122938012833,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "wind_speed",
+      "lead_day": 2,
+      "bust_threshold": 1.3887065709880018,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "wind_speed",
+      "lead_day": 3,
+      "bust_threshold": 1.514960598497455,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "wind_speed",
+      "lead_day": 4,
+      "bust_threshold": 1.670853723421411,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "wind_speed",
+      "lead_day": 5,
+      "bust_threshold": 1.7674145606911407,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "wind_speed",
+      "lead_day": 6,
+      "bust_threshold": 1.9145903415892613,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "wind_speed",
+      "lead_day": 7,
+      "bust_threshold": 2.100832074806515,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "wind_speed",
+      "lead_day": 8,
+      "bust_threshold": 2.258835016651635,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "wind_speed",
+      "lead_day": 9,
+      "bust_threshold": 2.4360926264736564,
+      "definition_mode": "percentile"
+    },
+    {
+      "variable": "wind_speed",
+      "lead_day": 10,
+      "bust_threshold": 2.558948745849208,
+      "definition_mode": "percentile"
+    }
+  ],
+  "global_feature_importance": [
+    {
+      "feature": "lead_day",
+      "importance": 0.0
+    },
+    {
+      "feature": "forecast_value",
+      "importance": 0.0
+    },
+    {
+      "feature": "ensemble_spread",
+      "importance": 0.0
+    },
+    {
+      "feature": "pressure_tendency",
+      "importance": 0.0
+    },
+    {
+      "feature": "cape",
+      "importance": 0.0
+    },
+    {
+      "feature": "humidity",
+      "importance": 0.0
+    },
+    {
+      "feature": "wind_shear",
+      "importance": 0.0
+    },
+    {
+      "feature": "rapid_change_index",
+      "importance": 0.0
+    },
+    {
+      "feature": "data_quality",
+      "importance": 0.0
+    },
+    {
+      "feature": "month_sin",
+      "importance": 0.0
+    },
+    {
+      "feature": "month_cos",
+      "importance": 0.0
+    },
+    {
+      "feature": "monsoon_indicator",
+      "importance": 0.0
+    },
+    {
+      "feature": "historical_mae",
+      "importance": 0.0
+    },
+    {
+      "feature": "historical_bias",
+      "importance": 0.0
+    },
+    {
+      "feature": "historical_bust_frequency",
+      "importance": 0.0
+    },
+    {
+      "feature": "forecast_change",
+      "importance": 0.0
+    },
+    {
+      "feature": "cyclone_like_indicator",
+      "importance": 0.0
+    },
+    {
+      "feature": "heavy_rain_environment",
+      "importance": 0.0
+    },
+    {
+      "feature": "heatwave_environment",
+      "importance": 0.0
+    }
+  ]
+}

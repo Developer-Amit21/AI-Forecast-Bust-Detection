@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    environment:
+      PORT: 8000
+      DATA_MODE: synthetic
+      DATABASE_URL: sqlite:////app/aerobust.db
+      CORS_ORIGINS: http://localhost:5173,http://localhost:3000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./aerobust.db:/app/aerobust.db

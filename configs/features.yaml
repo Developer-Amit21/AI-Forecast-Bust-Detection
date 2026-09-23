@@ -1,0 +1,9 @@
+version: v1
+rolling_history_cycles: 30
+event_indicator_threshold: 0.6
+exclude_from_features:
+  - observation_value
+  - signed_error
+  - absolute_error
+  - bust_binary
+  - error_severity

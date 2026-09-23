@@ -1,0 +1,10 @@
+mode: synthetic
+variables: [precipitation, temperature_2m, wind_speed]
+lead_days: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+latitude_bounds: [6.0, 36.0]
+longitude_bounds: [68.0, 98.0]
+synthetic:
+  historical_cycles: 180
+  grid_points_per_region: 3
+  seed: 42
+  initial_date: "2024-01-01T00:00:00Z"

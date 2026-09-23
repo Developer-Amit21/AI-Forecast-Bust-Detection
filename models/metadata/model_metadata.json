@@ -1,0 +1,9 @@
+{
+  "model_version": "synthetic_bust_v1",
+  "classifier_backend": "xgboost",
+  "regressor_backend": "lightgbm",
+  "feature_version": "v1",
+  "training_period": "2024-01-01T00:00:00+00:00 \u2192 2024-05-23T00:00:00+00:00",
+  "holdout_period": "2024-05-24T00:00:00+00:00 \u2192 2024-06-28T00:00:00+00:00",
+  "data_mode": "synthetic"
+}

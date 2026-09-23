@@ -1,0 +1,4 @@
+{
+  "status": "obsolete",
+  "message": "This project is deployed as a single Dockerized FastAPI + React application and does not use Vercel serverless functions or static rewrites."
+}

@@ -1,0 +1,4 @@
+import type { Variable } from '../types/api'
+export function ControlBar({ variable, setVariable, leadDay, setLeadDay }: {variable: Variable; setVariable: (value: Variable) => void; leadDay: number; setLeadDay: (value: number) => void}) {
+ return <section className="controls"><label>Variable<select value={variable} onChange={event => setVariable(event.target.value as Variable)}><option value="precipitation">Precipitation</option><option value="temperature_2m">2m temperature</option><option value="wind_speed">Wind speed</option></select></label><label>Lead day<select value={leadDay} onChange={event => setLeadDay(Number(event.target.value))}>{Array.from({length: 10}, (_, i) => <option key={i + 1} value={i + 1}>Day {i + 1}</option>)}</select></label><span className="control-note">Forecast cycle: latest synthetic run</span></section>
+}

@@ -1,0 +1,5 @@
+import type { Explanation, Prediction } from '../types/api'
+export function InsightPanel({ selected, explanation }: {selected: Prediction | null; explanation: Explanation | null}) {
+ if (!selected) return <aside className="insight">Select a region marker.</aside>
+ return <aside className="insight"><p className="eyebrow">Selected region</p><h2>{selected.region_name}</h2><div className="metrics"><div><small>Confidence</small><strong>{selected.confidence_score.toFixed(0)}%</strong></div><div><small>Bust probability</small><strong>{(selected.bust_probability * 100).toFixed(0)}%</strong></div><div><small>Expected error</small><strong>{selected.expected_error.toFixed(1)}</strong></div></div><p className={`risk ${selected.risk_level.toLowerCase()}`}>{selected.risk_level} RISK</p><h3>Why this assessment?</h3><ul>{explanation?.top_factors.map(factor => <li key={factor.feature}><b>{factor.feature.replaceAll('_', ' ')}</b> — {factor.direction}</li>) ?? <li>Loading feature associations…</li>}</ul><p className="disclaimer">{explanation?.disclaimer}</p></aside>
+}
