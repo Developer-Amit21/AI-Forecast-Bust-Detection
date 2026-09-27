@@ -51,3 +51,13 @@ models/*.pth
 
 # Vercel
 .vercel/
+
+.venv/
+venv/
+env/
+.env
+.env.*
+__pycache__/
+*.pyc
+node_modules/
+frontend/dist/

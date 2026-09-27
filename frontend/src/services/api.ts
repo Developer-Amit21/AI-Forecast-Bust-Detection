@@ -1,7 +1,9 @@
 import type { Explanation, Prediction, Variable } from "../types/api";
 
+const API_BASE = import.meta.env.VITE_API_URL ?? "";
+
 async function get<T>(path: string): Promise<T> {
-  const url = path.startsWith("/") ? path : `/${path}`;
+  const url = `${API_BASE}${path.startsWith("/") ? path : `/${path}`}`;
   const response = await fetch(url, {
     headers: { Accept: "application/json" },
   });

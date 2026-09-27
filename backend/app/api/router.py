@@ -16,7 +16,7 @@ from ml.preprocessing.validation import DataValidationError, validate_weather_fr
 
 router = APIRouter(prefix="/api")
 root_router = APIRouter()
-pipeline = ForecastBustPipeline(model_dir=settings.model_dir)
+pipeline = ForecastBustPipeline(model_dir=settings.model_dir, data_dir=settings.data_dir)
 
 
 def _records(frame: pd.DataFrame) -> list[dict]:
@@ -133,7 +133,7 @@ def ingest(request: IngestRequest) -> dict:
     try:
         records = validate_weather_frame(pd.DataFrame(request.records), require_observation=False)
     except DataValidationError as exc: raise HTTPException(status_code=422, detail=str(exc)) from exc
-    destination = Path("data/interim/ingested_forecasts.csv")
+    destination = Path(settings.data_dir).parent / "interim" / "ingested_forecasts.csv"
     destination.parent.mkdir(parents=True, exist_ok=True)
     records.to_csv(destination, index=False)
     return {"status": "accepted", "records": len(records), "data_mode": sorted(records.data_mode.unique().tolist()), "note": "Ingested data is validated and staged; training requires matched observations."}

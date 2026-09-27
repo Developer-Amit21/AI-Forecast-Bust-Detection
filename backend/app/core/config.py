@@ -14,6 +14,7 @@ class Settings:
         if value.strip()
     )
     model_dir: str = os.getenv("MODEL_DIR", "models/checkpoints")
+    data_dir: str = os.getenv("DATA_DIR", "data/synthetic")
     model_version: str = os.getenv("MODEL_VERSION", "synthetic_bust_v1")
     log_level: str = os.getenv("LOG_LEVEL", "INFO")
     port: int = int(os.getenv("PORT", "8000"))

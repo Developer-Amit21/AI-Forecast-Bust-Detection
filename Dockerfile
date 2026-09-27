@@ -7,6 +7,8 @@ COPY frontend/package*.json ./
 RUN npm ci
 
 COPY frontend/ .
+ARG VITE_API_URL
+ENV VITE_API_URL=${VITE_API_URL}
 RUN npm run build
 
 
@@ -18,7 +20,10 @@ WORKDIR /app
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PYTHONPATH=/app \
-    PORT=8000
+    PORT=8000 \
+    DATA_MODE=synthetic \
+    MODEL_DIR=/var/data/models/checkpoints \
+    DATA_DIR=/var/data/data
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -35,19 +40,16 @@ RUN pip install --no-cache-dir --upgrade pip \
 COPY backend ./backend
 COPY ml ./ml
 COPY configs ./configs
-COPY data ./data
-COPY models ./models
-COPY scripts ./scripts
-COPY .env.example /app/.env.example
 COPY --from=frontend-builder /frontend/dist /app/frontend_dist
 
+# Create persistent data directories
 RUN mkdir -p \
-    /app/data/raw \
-    /app/data/interim \
-    /app/data/processed \
-    /app/data/synthetic \
-    /app/models/checkpoints \
-    /app/models/metadata
+    /var/data/models/checkpoints \
+    /var/data/models/metadata \
+    /var/data/data/raw \
+    /var/data/data/interim \
+    /var/data/data/processed \
+    /var/data/data/synthetic
 
 EXPOSE 8000
 

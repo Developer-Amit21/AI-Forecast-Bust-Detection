@@ -1,0 +1,54 @@
+services:
+  # Backend API - Docker Web Service
+  - type: web
+    name: aerobust-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: standard
+    autoDeploy: true
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: "8000"
+      - key: DATA_MODE
+        value: synthetic
+      - key: DATABASE_URL
+        fromDatabase:
+          name: aerobust-db
+          property: connectionString
+      - key: CORS_ORIGINS
+        value: "https://aerobust-frontend.onrender.com,http://localhost:5173,http://localhost:3000"
+      - key: MODEL_DIR
+        value: /var/data/models/checkpoints
+      - key: DATA_DIR
+        value: /var/data/data
+      - key: LOG_LEVEL
+        value: INFO
+    disk:
+      name: aerobust-data
+      mountPath: /var/data
+      sizeGB: 5
+
+  # Frontend - Static Site
+  - type: web
+    name: aerobust-frontend
+    runtime: static
+    buildCommand: cd frontend && npm ci && npm run build
+    staticPublishPath: ./frontend/dist
+    pullRequestPreviewsEnabled: true
+    envVars:
+      - key: VITE_API_URL
+        value: https://aerobust-api.onrender.com
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+
+  # PostgreSQL Database
+  databases:
+    - name: aerobust-db
+      databaseName: aerobust
+      user: aerobust
+      plan: free
+      ipAllowList: []
