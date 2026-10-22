@@ -1,63 +1,49 @@
-# Python
+# Environments
 .venv/
 venv/
+ENV/
 env/
-__pycache__/
-*.py[cod]
-.pytest_cache/
-.mypy_cache/
 
 # Node
 node_modules/
 frontend/node_modules/
 frontend/dist/
+dist/
 
-# Environment / secrets
-.env
-.env.*
-!.env.example
-
-# Caches
-.cache/
-.pyright/
-.ruff_cache/
-
-# IDE
-.vscode/
-.idea/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Large/generated data
-data/raw/
-data/interim/
-data/processed/
-
-# Model checkpoints / generated models
-models/checkpoints/
-models/*.pkl
-models/*.joblib
-models/*.bin
-models/*.pt
-models/*.pth
-
-# Vercel
-.vercel/
-
-.venv/
-venv/
-env/
-.env
-.env.*
+# Python cache & build
 __pycache__/
-*.pyc
-node_modules/
-frontend/dist/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing & Linting
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# OS / Editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local secrets & logs
+.env
+*.log
